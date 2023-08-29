@@ -63,6 +63,4 @@ export class DashboardComponent implements OnInit {
     this.taskObj = etask;
     this.editTaskValue = etask.task_name;
   }
-
-
 }
