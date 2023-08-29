@@ -1,10 +1,9 @@
 {
     "version": 2,
     "builds": [
-      { "src": "package.json", "use": "vercel" }
+      { "src": "package.json", "use": "yarn build && yarn start-json-server" }
     ],
     "routes": [
       { "src": "/api/db.json", "dest": "/api/db.json" }
     ]
   }
-  
