@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "VERCEL_ENV=production yarn",
+      "config": {
+        "yarnBuildScript": "BUILD_COMMAND"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/db.json",
+      "dest": "/api/db.json"
+    }
+  ],
+  "functions": {
+    "api/db.json": {
+      "runtime": "vercel-node@0.1.0",
+      "memory": 128
+    }
+  }
+}
